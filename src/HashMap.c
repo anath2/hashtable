@@ -3,8 +3,10 @@
 
 /* Define a generic type that allows us to store any value inside the
 hashtable  */
+
 typedef void *any_t;
 
+typedef any_t map_t
 
 /* Define a bucket */
 
@@ -33,4 +35,13 @@ typedef struct _hashmap_map{
   int max_size;
   int size;
   hashmap_elem *data
+} hashmap_map
+
+
+
+map_t hashmap_new() {
+  hashmap_map* m = (hashmap_map*) malloc(sizeof(hashmap_map));
+  if (!m) goto error;
+
+
 }
